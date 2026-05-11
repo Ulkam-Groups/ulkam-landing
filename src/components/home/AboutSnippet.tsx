@@ -20,7 +20,7 @@ export default function AboutSnippet() {
                 }}
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&h=500&fit=crop&q=80"
+                  src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=700&h=500&fit=crop&q=80"
                   alt="Assam tea garden at sunrise"
                   width={700}
                   height={500}

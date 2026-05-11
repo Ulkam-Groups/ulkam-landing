@@ -20,7 +20,7 @@ export default function TeamSection() {
           <SectionHeading
             eyebrow="The People"
             title="Meet the Founder"
-            subtitle="The passionate individual behind every cup of Ulkam tea."
+            subtitle="The woman behind the Ulkam’s tea legacy."
           />
         </ScrollReveal>
 

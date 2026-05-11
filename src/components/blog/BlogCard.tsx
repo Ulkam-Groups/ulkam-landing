@@ -16,7 +16,7 @@ export default function BlogCard({ post }: BlogCardProps) {
       {/* Cover image */}
       <div className="relative h-48 overflow-hidden">
         <Image
-          src={post.coverImage ?? `https://picsum.photos/seed/${post.slug}/800/400`}
+          src={post.coverImage ?? `https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=800&h=400&fit=crop&q=80`}
           alt={post.title}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
