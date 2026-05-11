@@ -1,0 +1,57 @@
+/* ── Prose (MDX) overrides — Ahom/Gamosa theme ──────────────── */
+
+.prose {
+  --tw-prose-body:           #4A2E1A;
+  --tw-prose-headings:       #2C1A0E;
+  --tw-prose-lead:           #4A2E1A;
+  --tw-prose-links:          #C0392B;
+  --tw-prose-bold:           #2C1A0E;
+  --tw-prose-counters:       #7A5230;
+  --tw-prose-bullets:        #C9A84C;
+  --tw-prose-hr:             #C9A84C;
+  --tw-prose-quotes:         #2C1A0E;
+  --tw-prose-quote-borders:  #C0392B;
+  --tw-prose-captions:       #7A5230;
+  --tw-prose-code:           #9B2335;
+  --tw-prose-pre-code:       #F5F0E8;
+  --tw-prose-pre-bg:         #2C1A0E;
+  --tw-prose-th-borders:     #C9A84C;
+  --tw-prose-td-borders:     rgba(44,26,14,0.14);
+}
+
+.dark .prose {
+  --tw-prose-body:           #C8B89A;
+  --tw-prose-headings:       #F5F0E8;
+  --tw-prose-lead:           #C8B89A;
+  --tw-prose-links:          #E04030;
+  --tw-prose-bold:           #F5F0E8;
+  --tw-prose-counters:       #8A7060;
+  --tw-prose-bullets:        #D4A84C;
+  --tw-prose-hr:             #D4A84C;
+  --tw-prose-quotes:         #F5F0E8;
+  --tw-prose-quote-borders:  #E04030;
+  --tw-prose-captions:       #8A7060;
+  --tw-prose-code:           #E04030;
+  --tw-prose-pre-code:       #F5F0E8;
+  --tw-prose-pre-bg:         #1A0F07;
+  --tw-prose-th-borders:     #D4A84C;
+  --tw-prose-td-borders:     rgba(245,240,232,0.10);
+}
+
+/* Serif headings inside prose */
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-weight: 600;
+}
+
+/* Gold blockquote accent */
+.prose blockquote {
+  border-left-color: #C0392B;
+  font-style: italic;
+  background: rgba(201, 168, 76, 0.05);
+  padding: 1rem 1.5rem;
+  border-radius: 2px;
+}
