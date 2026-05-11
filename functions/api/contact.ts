@@ -20,39 +20,36 @@ export async function onRequestPost(context: {
       });
     }
 
-    // Log the contact enquiry (in production, forward to Resend/SendGrid/email API)
-    console.log('[Contact Form]', {
-      from: body.fullName,
-      email: body.email,
-      company: body.company,
-      region: body.region,
-      message: body.message.substring(0, 100),
+    // Send to Google Apps Script
+    const scriptRes = await fetch(context.env.GOOGLE_SCRIPT_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        secret: context.env.GOOGLE_SCRIPT_SECRET,
+        fullName: body.fullName,
+        company: body.company,
+        email: body.email,
+        phone: body.phone,
+        region: body.region,
+        message: body.message,
+      }),
     });
 
-    // To forward via Resend, uncomment and set RESEND_API_KEY in Cloudflare Pages env:
-    // await fetch('https://api.resend.com/emails', {
-    //   method: 'POST',
-    //   headers: {
-    //     Authorization: `Bearer ${context.env.RESEND_API_KEY}`,
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify({
-    //     from: 'website@ulkamgroup.com',
-    //     to: 'hello@ulkamgroup.com',
-    //     subject: `New Enquiry from ${body.fullName} (${body.region})`,
-    //     html: `<p><strong>Name:</strong> ${body.fullName}</p>
-    //            <p><strong>Company:</strong> ${body.company ?? 'N/A'}</p>
-    //            <p><strong>Email:</strong> ${body.email}</p>
-    //            <p><strong>Phone:</strong> ${body.phone ?? 'N/A'}</p>
-    //            <p><strong>Region:</strong> ${body.region}</p>
-    //            <p><strong>Message:</strong><br/>${body.message}</p>`,
-    //   }),
-    // });
+    const result = await scriptRes.json() as { success?: boolean; error?: string };
+
+    if (!result.success) {
+      console.error('[Contact Form Error]', result.error);
+      return new Response(JSON.stringify({ error: 'Failed to send message' }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
 
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
     });
+
   } catch (err) {
     console.error('[Contact Form Error]', err);
     return new Response(JSON.stringify({ error: 'Internal Server Error' }), {
