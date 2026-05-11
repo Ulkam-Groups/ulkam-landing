@@ -43,7 +43,7 @@ export default function HeroSection() {
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
         <p className="hero-eyebrow text-xs font-semibold tracking-[0.3em] uppercase text-ahom-gold mb-6">
-          Rooted in the Ahom Kingdom · Est. Assam, India
+          Rooted in Heritage · Crafted in Assam, India
         </p>
 
         <h1 className="font-serif font-semibold leading-[1.1] mb-6">
@@ -56,8 +56,7 @@ export default function HeroSection() {
         </h1>
 
         <p className="hero-sub text-base sm:text-lg md:text-xl text-ahom-cream/80 max-w-2xl mx-auto leading-relaxed mb-10">
-          Premium Orthodox &amp; CTC Teas — cultivated across the lush Brahmaputra valley for generations,
-          guided by the timeless heritage of the Ahom Kingdom.
+          Exceptional Orthodox &amp; CTC Teas — cultivated across Assam's lush valleys, reflecting the richness of its culture, artistry, and traditions.
         </p>
 
         <div className="hero-cta flex flex-col sm:flex-row items-center justify-center gap-4">

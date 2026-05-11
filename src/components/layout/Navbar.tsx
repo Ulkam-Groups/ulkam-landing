@@ -45,7 +45,10 @@ export default function Navbar() {
             <div className="w-8 h-8 rounded-sm bg-[var(--gamosa-red)] flex items-center justify-center">
               <Leaf size={16} className="text-ahom-cream rotate-45" />
             </div>
-            <span className="font-serif font-semibold text-xl text-[var(--text-primary)] group-hover:text-[var(--gamosa-red)] transition-colors">
+            <span className={cn(
+              'font-serif font-semibold text-xl transition-colors group-hover:text-[var(--gamosa-red)]',
+              scrolled ? 'text-[var(--text-primary)]' : 'text-ahom-cream'
+            )}>
               Ulkam Group
             </span>
           </Link>
@@ -58,10 +61,10 @@ export default function Navbar() {
                 href={link.href}
                 className={cn(
                   'px-4 py-2 text-sm font-medium rounded-sm transition-all duration-200',
-                  'hover:text-[var(--gamosa-red)] hover:bg-[var(--border-subtle)]',
+                  'hover:text-[var(--gamosa-red)] hover:bg-white/10',
                   pathname === link.href
-                    ? 'text-[var(--gamosa-red)]'
-                    : 'text-[var(--text-secondary)]'
+                    ? 'text-ahom-gold'
+                    : scrolled ? 'text-[var(--text-secondary)]' : 'text-ahom-cream/90'
                 )}
               >
                 {link.label}
@@ -82,7 +85,10 @@ export default function Navbar() {
             <button
               aria-label="Toggle menu"
               onClick={() => setMenuOpen((o) => !o)}
-              className="md:hidden w-9 h-9 flex items-center justify-center text-[var(--text-primary)]"
+              className={cn(
+                'md:hidden w-9 h-9 flex items-center justify-center transition-colors',
+                scrolled ? 'text-[var(--text-primary)]' : 'text-ahom-cream'
+              )}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>

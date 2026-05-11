@@ -20,7 +20,7 @@ export default function AboutSnippet() {
                 }}
               >
                 <Image
-                  src="https://picsum.photos/seed/assamtea/700/500"
+                  src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=700&h=500&fit=crop&q=80"
                   alt="Assam tea garden at sunrise"
                   width={700}
                   height={500}
@@ -31,7 +31,7 @@ export default function AboutSnippet() {
               {/* Floating label */}
               <div className="absolute -bottom-4 -right-4 bg-[var(--gamosa-red)] text-ahom-cream px-4 py-3 rounded-sm shadow-red">
                 <p className="text-xs font-semibold tracking-widest uppercase">Since</p>
-                <p className="font-serif text-2xl font-bold">1947</p>
+                <p className="font-serif text-2xl font-bold">1990</p>
               </div>
             </div>
           </ScrollReveal>
@@ -42,19 +42,19 @@ export default function AboutSnippet() {
               About Ulkam Group
             </p>
             <h2 className="font-serif text-3xl md:text-4xl font-semibold text-[var(--text-primary)] leading-tight mb-4">
-              Three Generations of<br />
-              <span className="text-gradient-gold">Tea Mastery</span>
+              From Assam,<br />
+              <span className="text-gradient-gold">With Purpose</span>
             </h2>
             <GamosaAccent className="max-w-xs mb-6" />
             <p className="text-[var(--text-secondary)] leading-relaxed mb-4">
-              Nestled in the verdant plains of Assam — the birthplace of India's tea industry —
-              Ulkam Group has been cultivating, processing, and delivering premium teas for over
-              seven decades. Our gardens draw their character from the rich alluvial soil of the
-              Brahmaputra valley, a legacy shaped by the ancient Ahom Kingdom.
+              Charaideo began with a vision to celebrate the true essence of Assamese tea through
+              quality, authenticity, and thoughtful craftsmanship. Sourced from the lush
+              tea-growing regions of Assam, our teas are carefully selected to deliver rich
+              flavour, depth, and comfort in every cup.
             </p>
             <p className="text-[var(--text-muted)] leading-relaxed mb-8">
-              From the bold, malty character of our BP-BOP to the warming embrace of our
-              Spiced Masala blend, every cup tells a story of land, lineage, and craft.
+              Rooted in heritage and driven by passion, Charaideo is our promise to serve the
+              finest expressions of Assam tea — one cup at a time.
             </p>
             <Link
               href="/about"

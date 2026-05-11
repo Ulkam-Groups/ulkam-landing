@@ -6,7 +6,7 @@ const TEAM = [
   {
     name: 'Kamalika Biswas',
     role: 'CEO & Founder',
-    image: 'https://picsum.photos/seed/kamalika/400/400',
+    image: '/kamalika-biswas.jpg',
     bio: 'Founder of Ulkam Group, driving the vision to bring the finest Assam teas to the world.',
     linkedin: 'https://www.linkedin.com/in/kamalika-biswas/',
   },
@@ -20,7 +20,7 @@ export default function TeamSection() {
           <SectionHeading
             eyebrow="The People"
             title="Meet the Founder"
-            subtitle="The passionate individual behind every cup of Ulkam tea."
+            subtitle="The woman behind the Ulkam’s tea legacy."
           />
         </ScrollReveal>
 
@@ -28,13 +28,12 @@ export default function TeamSection() {
           {TEAM.map((member, i) => (
             <ScrollReveal key={member.name} delay={i * 0.1}>
               <div className="text-center group max-w-xs">
-                <div className="relative w-32 h-32 mx-auto mb-5 overflow-hidden rounded-full border-2 border-[var(--gold)] group-hover:border-[var(--gamosa-red)] transition-colors duration-300">
+                <div className="relative w-36 h-36 mx-auto mb-5 overflow-hidden rounded-full border-2 border-[var(--gold)] group-hover:border-[var(--gamosa-red)] transition-colors duration-300">
                   <Image
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover"
-                    unoptimized
+                    className="object-cover object-top"
                   />
                 </div>
                 <h3 className="font-serif text-2xl font-semibold text-[var(--text-primary)]">

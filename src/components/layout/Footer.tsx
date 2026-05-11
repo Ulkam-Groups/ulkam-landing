@@ -35,7 +35,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm text-ahom-cream/70 leading-relaxed mb-5">
-              Rooted in the heritage of the Ahom Kingdom. Bringing the finest teas of Assam to tables across the world.
+              Rooted in heritage. Bringing the finest teas of Assam to tables across the world.
             </p>
             <div className="flex items-center gap-3">
               <a href="#" aria-label="Instagram" className="text-ahom-cream/60 hover:text-ahom-gold transition-colors">
