@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     template: '%s | Ulkam Group',
   },
   description:
-    'Ulkam Group brings the finest orthodox and CTC teas from the lush gardens of Assam, India. Rooted in the heritage of the Ahom Kingdom.',
-  keywords: ['Assam tea', 'orthodox tea', 'CTC tea', 'BOP tea', 'Ahom', 'Ulkam Group', 'India tea'],
+    'Ulkam Group brings the finest orthodox and CTC teas from the lush gardens of Assam, India. Rooted in heritage, crafted with care.',
+  keywords: ['Assam tea', 'orthodox tea', 'CTC tea', 'BOP tea', 'Ulkam Group', 'India tea', 'Charaideo'],
   authors: [{ name: 'Ulkam Group' }],
   openGraph: {
     type: 'website',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: 'Ulkam Group',
     title: 'Ulkam Group — Premium Assam Tea',
     description:
-      'Finest orthodox and CTC teas from the heart of Assam, rooted in Ahom Kingdom heritage.',
+      'Finest orthodox and CTC teas from the heart of Assam, rooted in heritage and crafted with care.',
     images: [
       {
         url: '/og-image.jpg',

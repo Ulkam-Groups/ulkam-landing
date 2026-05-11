@@ -7,7 +7,7 @@ import TeamSection from '@/components/about/TeamSection';
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'Discover the story of Ulkam Group — three generations of tea mastery rooted in the Ahom Kingdom heritage of Assam, India.',
+    'Discover the story of Ulkam Group — rooted in the heritage of Assam, India, and driven by a passion for authentic tea.',
 };
 
 export default function AboutPage() {

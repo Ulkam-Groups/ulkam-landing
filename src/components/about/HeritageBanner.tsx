@@ -4,7 +4,7 @@ export default function HeritageBanner() {
   return (
     <section className="relative h-[50vh] min-h-[320px] flex items-center justify-center overflow-hidden">
       <Image
-        src="https://picsum.photos/seed/ahomheritage/1600/600"
+        src="https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?w=1600&h=600&fit=crop&q=80"
         alt="Ahom Kingdom heritage of Assam"
         fill
         className="object-cover"
@@ -27,10 +27,10 @@ export default function HeritageBanner() {
           Our Heritage
         </p>
         <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-ahom-cream leading-tight">
-          Rooted in the Ahom Kingdom
+          Rooted in Heritage · Crafted in Assam, India
         </h1>
         <p className="mt-4 text-ahom-cream/70 max-w-xl mx-auto">
-          600 years of Ahom legacy, three generations of tea mastery — this is the story of Ulkam Group.
+          Rooted in Assam. Inspired by heritage. This is the story of Ulkam Group.
         </p>
       </div>
 

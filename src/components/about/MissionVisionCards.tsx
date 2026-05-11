@@ -28,9 +28,9 @@ export default function MissionVisionCards() {
                 To Bring Assam to Every Table
               </h3>
               <p className="text-ahom-cream/70 leading-relaxed">
-                Our mission is to deliver the authentic, uncompromised flavours of Assam's tea estates
-                directly to households, HoReCa partners, and export buyers — preserving traditional
-                cultivation methods while meeting the standards of today's discerning consumer.
+                To preserve and promote the rich tea heritage of Assam through ethically sourced
+                and carefully curated teas — supporting sustainable practices that respect the land,
+                the people, and the generations connected to tea cultivation.
               </p>
             </div>
           </ScrollReveal>
@@ -45,12 +45,13 @@ export default function MissionVisionCards() {
                 Vision
               </p>
               <h3 className="font-serif text-2xl font-semibold text-ahom-cream mb-4">
-                Ahom Heritage, Global Stage
+                Assam's Soul, the World's Cup
               </h3>
               <p className="text-ahom-cream/70 leading-relaxed">
-                We envision Ulkam Group as the foremost ambassador of Assam's tea culture on the world
-                stage — a brand synonymous with the Ahom Kingdom's legacy of excellence, where every
-                garden-to-cup journey is traceable, sustainable, and steeped in centuries of pride.
+                To bring the soul of Assam to the world through authentic, thoughtfully crafted teas
+                that honour heritage, celebrate culture, and create a timeless connection between
+                tradition and modern living — building a modern Indian tea brand for a new generation
+                of consumers.
               </p>
             </div>
           </ScrollReveal>

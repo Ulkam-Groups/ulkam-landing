@@ -11,41 +11,81 @@ export default function LaunchBanner() {
     <AnimatePresence>
       {visible && (
         <motion.div
-          initial={{ opacity: 0, y: -40 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -40 }}
-          transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="fixed top-0 left-0 right-0 z-[60]"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          className="fixed inset-0 z-[100] flex items-center justify-center px-6"
           style={{
-            background: 'rgba(192, 57, 43, 0.82)',
-            backdropFilter: 'blur(12px)',
-            WebkitBackdropFilter: 'blur(12px)',
-            borderBottom: '1px solid rgba(255,255,255,0.15)',
+            background: 'linear-gradient(135deg, #1a0e06 0%, #2C1A0E 50%, #1a0e06 100%)',
           }}
         >
-          <div className="max-w-7xl mx-auto px-4 h-10 flex items-center justify-center relative">
-            {/* Dot + text */}
-            <div className="flex items-center gap-2.5">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-60" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-white" />
+          {/* Gamosa accent — top */}
+          <div
+            className="absolute top-0 left-0 right-0 h-1.5"
+            style={{ background: 'linear-gradient(90deg, #D42B2B, #C9A84C, #D42B2B)' }}
+          />
+
+          {/* Dismiss button */}
+          <button
+            onClick={() => setVisible(false)}
+            aria-label="Dismiss banner"
+            className="absolute top-5 right-5 text-white/70 hover:text-white transition-colors p-2"
+          >
+            <X size={28} strokeWidth={1.5} />
+          </button>
+
+          {/* Content */}
+          <div className="text-center max-w-3xl mx-auto">
+            {/* Pulsing dot */}
+            <div className="flex items-center justify-center gap-2.5 mb-8">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-ahom-gold opacity-60" />
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-ahom-gold" />
               </span>
-              <p className="text-white text-sm font-medium tracking-wide">
-                🍃 &nbsp;Ulkam Group is&nbsp;
-                <span className="font-bold tracking-wider uppercase">Launching Soon</span>
-                &nbsp;— stay tuned for something special from the heart of Assam.
+              <p className="text-xs font-semibold tracking-[0.3em] uppercase text-ahom-gold">
+                Coming Soon
               </p>
             </div>
 
-            {/* Close */}
+            {/* Headline */}
+            <h1 className="font-serif font-semibold leading-[1.1] mb-6">
+              <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-ahom-cream mb-2">
+                Ulkam Group is
+              </span>
+              <span
+                className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
+                style={{ background: 'linear-gradient(90deg, #C9A84C, #E0C06E, #C9A84C)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}
+              >
+                Launching Soon
+              </span>
+            </h1>
+
+            {/* Divider */}
+            <div
+              className="w-24 h-0.5 mx-auto mb-6"
+              style={{ background: 'linear-gradient(90deg, transparent, #C9A84C, transparent)' }}
+            />
+
+            {/* Subtext */}
+            <p className="text-ahom-cream/70 text-base sm:text-lg md:text-xl leading-relaxed max-w-xl mx-auto mb-10">
+              Stay tuned for something special from the heart of Assam.
+            </p>
+
+            {/* CTA */}
             <button
               onClick={() => setVisible(false)}
-              aria-label="Dismiss banner"
-              className="absolute right-4 text-white/70 hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 px-8 py-3 border border-ahom-gold/60 text-ahom-gold font-medium tracking-wide text-sm hover:bg-ahom-gold hover:text-ahom-brown transition-all duration-300 rounded-sm"
             >
-              <X size={15} />
+              Enter the Site
             </button>
           </div>
+
+          {/* Gamosa accent — bottom */}
+          <div
+            className="absolute bottom-0 left-0 right-0 h-1.5"
+            style={{ background: 'linear-gradient(90deg, #D42B2B, #C9A84C, #D42B2B)' }}
+          />
         </motion.div>
       )}
     </AnimatePresence>

@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import SectionHeading from '@/components/ui/SectionHeading';
 
@@ -6,7 +5,7 @@ const TEAM = [
   {
     name: 'Kamalika Biswas',
     role: 'CEO & Founder',
-    image: 'https://picsum.photos/seed/kamalika/400/400',
+    initials: 'KB',
     bio: 'Founder of Ulkam Group, driving the vision to bring the finest Assam teas to the world.',
     linkedin: 'https://www.linkedin.com/in/kamalika-biswas/',
   },
@@ -28,14 +27,10 @@ export default function TeamSection() {
           {TEAM.map((member, i) => (
             <ScrollReveal key={member.name} delay={i * 0.1}>
               <div className="text-center group max-w-xs">
-                <div className="relative w-32 h-32 mx-auto mb-5 overflow-hidden rounded-full border-2 border-[var(--gold)] group-hover:border-[var(--gamosa-red)] transition-colors duration-300">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                    unoptimized
-                  />
+                <div className="relative w-32 h-32 mx-auto mb-5 overflow-hidden rounded-full border-2 border-[var(--gold)] group-hover:border-[var(--gamosa-red)] transition-colors duration-300 bg-ahom-brown-mid flex items-center justify-center">
+                  <span className="font-serif text-3xl font-semibold text-ahom-gold select-none">
+                    {member.initials}
+                  </span>
                 </div>
                 <h3 className="font-serif text-2xl font-semibold text-[var(--text-primary)]">
                   {member.name}
